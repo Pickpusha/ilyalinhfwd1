@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: #AED6F1;
+    color: #fff;
+}
+
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/rZaIrX1UG2k.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+.container{
+    padding: 10px 10%;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    color: #F4F6F7;
+    font-family: Apple Chancery, cursive;
+    text-decoration: none;
+    font-size: 36px;
+    text-shadow: 2px 2px 2px #000;
+    text-align: center;
+    position: relative
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #F1C40F;
+    box-shadow: 1px 1px #000;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+.headertext{
+    margin-top: 20%;
+    color: #F4F6F7;
+    font-size: 40px;
+}
+.headertext h1{
+    color: #F4F6F7;
+    font-family: Apple Chancery, cursive;
+    text-shadow: 2px 2px 2px #000;
+}
+
+.headertext h1 span{
+    color: #F1C40F;
+    font-family: Apple Chancery, cursive;
+    text-shadow: 2px 2px 2px #000;
+}
+/* -----------About------------ */
+#about{
+    padding: 80px 0;
+    color: #F4F6F7;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 35%;
+}
+
+.about-col-2{
+    flex-basis: 40%;
+}
+
+.subtitle{
+    color: #F4F6F7;
+    font-family: Apple Chancery, cursive;
+    font-weight: 600;
+    font-size: 60px;
+    text-shadow: 2px 2px 2px #000;
+}
+.bio{
+    color: #F4F6F7;
+    font-family: Apple Chancery, cursive;
+    font-size: 23px;
+    text-shadow: 2px 2px 2px #000;
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 32px;
+    font-weight: 500;
+    font-family: Apple Chancery, cursive;
+    text-shadow: 2px 2px 2px #000;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 4px;
+    background: #F1C40F;
+    box-shadow: 1px 1px #000;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+    font-family: Apple Chancery, cursive;
+    text-shadow: 2px 2px 2px #000;
+    font-size: 28px;
+}
+.tab-contents ul li span{
+    color: #F1C40F;
+    font-size: 28px;
+    font-family: Apple Chancery, cursive;
+    text-shadow: 2px 2px 2px #000;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+/* -----------Contact------------ */
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 65%;
+}
+.sub-title{
+    color: #F4F6F7;
+    font-family: Apple Chancery, cursive;
+    font-size: 47px;
+    text-shadow: 2px 2px 2px #000;
+}
+.contact-left p{
+    color: #F4F6F7;
+    font-family: Apple Chancery, cursive;
+    font-size: 23px;
+    text-shadow: 2px 2px 2px #000;
+}

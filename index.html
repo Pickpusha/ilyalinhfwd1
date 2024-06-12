@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Ilya-Linh Nguyen website</title>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contacts</a></li>
+                </ul>
+            </nav>
+            <div class="headertext">
+                <h1>Hi, I am <span>Ilya-Linh Nguyen</span><br> from <span>Innopolis</span><br></h1>
+            </div>
+        </div>
+    </div>
+    <!-----------About----------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/o-fotor-bg-remover-20240611164459.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p class="bio"> I am Ilya - Linh Nguyen and I am the student of Innopolis University. Finished the school №2 with red diploma and gold medal, participated in a lot of technical olympiads, had experience with Game, Web and App development.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="Skills">
+                        <ul>
+                            <li><span>Game Development</span><br>Making games with Godot</li>
+                            <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                            <li><span>Web Development</span><br>Web app Development(Java, JavaScript, HTML/CSS, Python)</li>
+                            <li><span>App Development</span><br>Building Android/iOS apps(Flutter, Swift)</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id = "Education">
+                        <ul>
+                            <li><span>2023 - now</span><br>Innopolis University</li>
+                            <li><span>2012 - 2023</span><br>School №2 in Serpukhov</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-----------------------------Contact------------------------------------>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact me</h1>
+                    <p><img src="images/icons8-почта-50.png" width="19" height="19" alt="Mail"> i.nguen@innopolis.university</p>
+                    <p><img src="images/icons8-телефон-50.png" width="19" height="19" alt="Phone"> +79151627014</p>
+                    <div class="social-icons">
+                        <a id="tg-link" href="https://t.me/pickpusha"><img src="images/tg.png" width="35" height="35" alt="Telegram"></a>
+                        <a id="tg-link" href="https://github.com/Pickpusha"><img src="images/github.png" width="35" height="35" alt="Github"></a>
+                        <a id="tg-link" href="https://vk.com/oouki"><img src="images/icons8-vk-50.png" width="35" height="35" alt="VK"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link")
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab")
+            }
+            event.currentTarget.classList.add("active-link")
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+</body>
+</html>
