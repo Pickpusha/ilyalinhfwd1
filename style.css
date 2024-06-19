@@ -73,26 +73,7 @@ nav ul li a:hover::after{
     font-family: Apple Chancery, cursive;
     text-shadow: 2px 2px 2px #000;
 }
-.comic{
-    display: inline-block;
-    padding: 10px 15px;
-    color: #5985a2;
-    font-family: Apple Chancery, cursive;
-    font-weight: 600;
-    font-size: 25px;
-    background-color: #F1C40F;
-    border: 1px solid #F1C40F;
-    border-radius: 5px;
-}
 
-.comic:hover{
-    opacity: .8;
-    cursor: pointer;
-}
-.comic:focus{
-    opacity: .8;
-    outline: none;
-}
 /* -----------About------------ */
 #about{
     padding: 80px 0;
