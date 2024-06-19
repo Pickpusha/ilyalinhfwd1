@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-for-comic.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oooh+Baby&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@300;400;500;600;700&family=Oooh+Baby&display=swap" rel="stylesheet">
+    <title>XKCD Comic Fetcher</title>
+</head>
+<body>
+    <div id="comic-container">
+        <h1 id="comic-title">_</h1>
+        <img id="comic-img" src="image-of-comic.jpg" alt="It will be loaded">
+        <p id="comic-date"></p>
+        <p id="comic-alt"></p>
+    </div>
+    <script>
+        async function fetchComic() {
+            const email = 'i.nguen@innopolis.university';
+            const apiUrl = 'https://fwd.innopolis.university/api/hw2';
+            const params = new URLSearchParams({ email });
+            const response = await fetch(`${apiUrl}?${params}`);
+            const comicId = await response.text();
+            const comicResponse = await fetch(`https://fwd.innopolis.university/api/comic?id=${comicId}`);
+            const comicData = await comicResponse.json();
+            document.getElementById('comic-title').textContent = comicData.safe_title;
+            document.getElementById('comic-img').src = comicData.img;
+            document.getElementById('comic-img').alt = comicData.alt;
+            const comicDate = new Date(comicData.year, comicData.month - 1, comicData.day); 
+            document.getElementById('comic-date').textContent = comicDate.toLocaleDateString();
+            document.getElementById('comic-alt').textContent = comicData.alt;
+        }
+        fetchComic();
+    </script>
+</body>
+</html>
